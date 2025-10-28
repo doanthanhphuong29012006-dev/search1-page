@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    font-family: Inter, sans-serif;
+    background-color: #f3eaff;
+    color: #333;
+    padding-top: 80px;
+}
+
+.app_header 
+{
+    background-color: #ffffff;
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logo img 
+{
+    height: 50px;
+    animation: fly 3s ease-in-out infinite;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logo:hover
+{
+    transform: scale(1.06);
+}
+
+@keyframes fly 
+{
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, -5px) rotate(5deg); }
+    50% { transform: translate(0, -10px) rotate(0deg); }
+    75% { transform: translate(-5px, -5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.main_nav 
+{
+    display: flex;
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+.main_nav a 
+{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.main_nav a.active 
+{
+    color: #933eb7;
+}
+
+.content_wrapper 
+{
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 500px;
+    min-height: calc(100vh - 120px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.search_container 
+{
+    position: relative;
+    margin-bottom: 25px; 
+}
+
+.search_icon 
+{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.search_bar 
+{
+    width: 100%;
+    border: 2px solid #111111;
+    border-radius:16px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    padding: 15px 15px 15px 45px;
+}
+
+.search_bar:focus 
+{
+    outline: none;
+    border-color: #000000;
+    background-color: #fff;
+}
+
+.tag_list 
+{
+    list-style-type: none;
+    width: 480px;
+    margin: 0 auto;
+}
+
+.tag_item 
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.tag_item:hover
+{
+    background-color: #f5f5f5;
+    transform: translateY(-2px); 
+    border-radius: 8px; 
+}
+
+.tag_image_placeholder 
+{
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.tag_info 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.tag_name 
+{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.tag_count 
+{
+    font-size: 14px;
+    color: #777;
+}
